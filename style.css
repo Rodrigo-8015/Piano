@@ -15,27 +15,57 @@ body{
     width: 750px; */
 }
 
-
-
 .piano{
-
-
-    border: solid 2px black;
+    border: solid 4px black;
     display: flex;
-    /* flex: 1;
-    min-height: 100vh; */
     align-items: center;
     justify-content: center;
-    height: 550px;
-    width: 750px;
-    
 
 }
 
+.Teclado{
+    display: flex;
+    /* border: solid 2px black; */
+}
+
+.A{
+    display: flex;
+    z-index: 1;
+    /* border: solid 2px black; */
+}
+
+.B{
+    display: flex;
+    z-index: 1; 
+    /* border: solid 2px black; */
+}
+
+.bloque1{
+    display: flex;
+    align-items: top;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    margin-left: 20px;
+}
+
+.bloque2{
+    display: flex;
+    align-items: top;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    margin-left: 20px;
+}
+
+.teclas-menores{
+    border: solid 1px black;
+    border-radius: 5px;
+    width: 40px;
+    height: 120px;
+    background-image: url('assets/negro.png');
+    margin: 0px 0px 0px 10px;
+}
 
 .tecla{
-
-
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -43,12 +73,16 @@ body{
     border-radius: 10px;
     width: 50px;
     height: 250px;
-    /* background-color: white; */
     transition: all 0.1s ease;
     background-image: url('assets/white.png');
-    
-
 }
+
+
+
+
+
+
+
 
 
 .tocar{
@@ -108,7 +142,7 @@ span{
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    top: 	41%;
+    top: 41%;
     left: 10%;
     width: 100%;
     height: 50px;
@@ -117,31 +151,12 @@ span{
 }
 
 
-.teclas-menores{
-    border: solid 1px black;
-    border-radius: 5px;
-    width: 40px;
-    height: 120px;
-    background-image: url('assets/negro.png');
-    margin: 0px 0px 0px 10px;
-}
-
-.bloque1{
-    display: flex;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0);
-    position: relative;
-    left: 4%;
-}
 
 
-.bloque2{
-    display: flex;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0);
-    position: relative;
-    left: 9%;
-}
+
+
+
+
 
 .bloque3{
     display: flex;
