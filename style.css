@@ -1,41 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&display=swap');
 
 
-*{
-    background-color: cornflowerblue;
-}
-
 body{
-    display: flex;
+    /* display: flex; */
     flex: 1;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    /* height: 250px;
-    width: 750px; */
+    background: rgb(108,109,112);
+    background: radial-gradient(circle, rgba(108,109,112,1) 0%, rgba(8,7,8,1) 100%);
+    /* background-color: rgb(97, 95, 95); */
 }
-
-
 
 .piano{
-
-
-    border: solid 2px black;
+    /* border: solid 4px black; */
     display: flex;
-    /* flex: 1;
-    min-height: 100vh; */
     align-items: center;
     justify-content: center;
-    height: 550px;
-    width: 750px;
-    
 
 }
 
+.Teclado{
+    display: flex;
+    /* border: solid 2px black; */
+}
+.case{
+    /* border: white 3px solid; */
+    height: 300px;
+    width: 60%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 5%;
+}
+
+.nota{
+    height: 80px;
+    width: 80px;
+    /* border: white 3px solid; */
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.A{
+    display: flex;
+    z-index: 1;
+    /* border: solid 2px black; */
+}
+
+.B{
+    display: flex;
+    z-index: 1; 
+    /* border: solid 2px black; */
+}
+
+.bloque1{
+    display: flex;
+    align-items: top;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    margin-left: 20px;
+}
+
+.bloque2{
+    display: flex;
+    align-items: top;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    margin-left: 20px;
+}
+
+.teclas-menores{
+    border: solid 1px black;
+    border-radius: 5px;
+    width: 40px;
+    height: 120px;
+    background-image: url('assets/negro.png');
+    margin: 0px 0px 0px 10px;
+}
 
 .tecla{
-
-
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -43,12 +91,45 @@ body{
     border-radius: 10px;
     width: 50px;
     height: 250px;
-    /* background-color: white; */
     transition: all 0.1s ease;
     background-image: url('assets/white.png');
-    
-
 }
+
+.options_padre{
+    display: flex;
+    justify-content: center;
+}
+
+.options{
+    height: 200px;
+    width: 90%;
+    /* border: white solid 3px; */
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: #1c1c1d;
+    padding: 10px;
+}
+
+.options > div {
+    background-color: rgba(71, 69, 69, 0.8);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    color: white;
+  }
+
+  .space{
+      height: 50px;
+      width: 100%;
+  }
+
+
+
+
+
+
+
 
 
 .tocar{
@@ -108,7 +189,7 @@ span{
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    top: 	41%;
+    top: 41%;
     left: 10%;
     width: 100%;
     height: 50px;
@@ -117,31 +198,12 @@ span{
 }
 
 
-.teclas-menores{
-    border: solid 1px black;
-    border-radius: 5px;
-    width: 40px;
-    height: 120px;
-    background-image: url('assets/negro.png');
-    margin: 0px 0px 0px 10px;
-}
-
-.bloque1{
-    display: flex;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0);
-    position: relative;
-    left: 4%;
-}
 
 
-.bloque2{
-    display: flex;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0);
-    position: relative;
-    left: 9%;
-}
+
+
+
+
 
 .bloque3{
     display: flex;
