@@ -8,16 +8,19 @@ function playSound(e){
     
     audio.currenTime =  0; //
     audio.play()
+    console.log(audio)
     key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
 
     }
-
+    
+    
+  
     function removerTransition(e){        
             
         if(e.propertyName !== 'transform' ) return;
-        console.log(e.propertyName);
+        // console.log(e.propertyName);
         this.classList.remove('tocar');
-        console.log(this);
+        // console.log(this);
 
 
     }
@@ -26,14 +29,14 @@ function playSound(e){
               keys.forEach(key => key.addEventListener('transitionend', removerTransition))
 
 
-window.addEventListener('keydown', playSound);
 
+window.addEventListener('keydown', playSound);
 
 // aqui incician las melodias. 
 
-let texto = document.getElementById('teclota')
+let texto = document.getElementById('notaTecla')
 
-var botonStart = document.getElementById('startStopBtn')
+
 
 //TECLAS MAYORES
 
@@ -72,13 +75,13 @@ function noteE(){
   let audio = document.querySelector('audio[data-key="68"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
   let key = document.querySelector('.tecla[data-key="68"]'); // el $ concatena una funcion. 
   if (!audio) return; // para la funcion cuando tiene el valor null 
-  
+  texto.innerHTML = '"E"'
   audio.currenTime =  0; //
   audio.play()
   key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
-      texto.innerHTML = '"E"'
+      
 })
 }
 
@@ -87,13 +90,13 @@ function noteF(){
   let audio = document.querySelector('audio[data-key="70"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
   let key = document.querySelector('.tecla[data-key="70"]'); // el $ concatena una funcion. 
   if (!audio) return; // para la funcion cuando tiene el valor null 
-  
+  texto.innerHTML = '"F"'
   audio.currenTime =  0; //
   audio.play()
   key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
-      texto.innerHTML = '"F"'
+      
 })
 }
 
@@ -103,13 +106,13 @@ function noteG(){
   let audio = document.querySelector('audio[data-key="71"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
   let key = document.querySelector('.tecla[data-key="71"]'); // el $ concatena una funcion. 
   if (!audio) return; // para la funcion cuando tiene el valor null 
-  
+  texto.innerHTML = '"G"'
   audio.currenTime =  0; //
   audio.play()
   key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
-      texto.innerHTML = '"G"'
+      
 })
 }
 
@@ -119,13 +122,13 @@ function noteA(){
   let audio = document.querySelector('audio[data-key="72"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
   let key = document.querySelector('.tecla[data-key="72"]'); // el $ concatena una funcion. 
   if (!audio) return; // para la funcion cuando tiene el valor null 
-  
+  texto.innerHTML = '"A"'
   audio.currenTime =  0; //
   audio.play()
   key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
-      texto.innerHTML = '"A"'
+      
 })
 }
 
@@ -134,13 +137,13 @@ function noteB(){
   let audio = document.querySelector('audio[data-key="74"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
   let key = document.querySelector('.tecla[data-key="74"]'); // el $ concatena una funcion. 
   if (!audio) return; // para la funcion cuando tiene el valor null 
-  
+  texto.innerHTML = '"B"'
   audio.currenTime =  0; //
   audio.play()
   key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
-      texto.innerHTML = '"B"'
+      
 })
 }
 
@@ -149,13 +152,13 @@ function noteC(){
   let audio = document.querySelector('audio[data-key="75"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
   let key = document.querySelector('.tecla[data-key="75"]'); // el $ concatena una funcion. 
   if (!audio) return; // para la funcion cuando tiene el valor null 
-  
+  texto.innerHTML = '"C"'
   audio.currenTime =  0; //
   audio.play()
   key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
-      texto.innerHTML = '"C"'
+      
 })
 }
 
@@ -164,13 +167,13 @@ function noteD(){
   let audio = document.querySelector('audio[data-key="76"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
   let key = document.querySelector('.tecla[data-key="76"]'); // el $ concatena una funcion. 
   if (!audio) return; // para la funcion cuando tiene el valor null 
-  
+  texto.innerHTML = '"D"'
   audio.currenTime =  0; //
   audio.play()
   key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
-      texto.innerHTML = '"D"'
+      
 })
 }
 
@@ -179,13 +182,13 @@ function noteE(){
   let audio = document.querySelector('audio[data-key="192"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
   let key = document.querySelector('.tecla[data-key="192"]'); // el $ concatena una funcion. 
   if (!audio) return; // para la funcion cuando tiene el valor null 
-  
+  texto.innerHTML = '"E"'
   audio.currenTime =  0; //
   audio.play()
   key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
-      texto.innerHTML = '"E"'
+      
 })
 }
 
@@ -195,13 +198,13 @@ function noteF(){
   let audio = document.querySelector('audio[data-key="88"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
   let key = document.querySelector('.tecla[data-key="88"]'); // el $ concatena una funcion. 
   if (!audio) return; // para la funcion cuando tiene el valor null 
-  
+  texto.innerHTML = '"F"'
   audio.currenTime =  0; //
   audio.play()
   key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
-      texto.innerHTML = '"F"'
+      
 })
 }
 
@@ -211,13 +214,13 @@ function noteG(){
   let audio = document.querySelector('audio[data-key="67"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
   let key = document.querySelector('.tecla[data-key="67"]'); // el $ concatena una funcion. 
   if (!audio) return; // para la funcion cuando tiene el valor null 
-  
+  texto.innerHTML = '"G"'
   audio.currenTime =  0; //
   audio.play()
   key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
-      texto.innerHTML = '"G"'
+      
 })
 }
 
@@ -228,6 +231,9 @@ function noteG(){
 
 // melodias
 
+var botonStart = document.getElementById('melody1')
+var btn_melodia2 = document.getElementById('melody2')
+
 function melody01 (){
   setTimeout(noteA, 1000)
   setTimeout(noteB, 2000)
@@ -237,4 +243,16 @@ function melody01 (){
   
 }
 
+
+function melody02(){
+  const array = [noteA, noteB, noteC, noteD, noteC, noteE]
+
+    array.forEach(item => setTimeout(item, 1000) )
+    
+}
+
+
+
+
 botonStart.addEventListener('click', melody01)
+btn_melodia2.addEventListener('click', melody02)
