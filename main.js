@@ -230,9 +230,6 @@ function melody01 (){
     setTimeout(noteF, 4000)
 }
 
-for(i=0;i>3;i++){
-  sequence[i];
-  setTimeout()
-}
+
 
 botonStart.addEventListener('click', melody01)
