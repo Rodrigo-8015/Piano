@@ -128,12 +128,7 @@ body{
 
 
 
-
-
-
-
 .tocar{
-
     transform: scale(1.1);
     border-color: #ffc600;
     box-shadow: 0 0 1rem #ffc600;
@@ -145,8 +140,7 @@ span{
     text-align: center;
     margin-bottom: 10px;
     text-shadow: 1px;
-    color: tomato;
-    
+    color: tomato;  
 }
 
 .tapa{
