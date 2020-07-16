@@ -4,11 +4,10 @@
 function playSound(e){
     let audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
     let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`); // el $ concatena una funcion. 
-    if (!audio) return; // para la funcion cuando tiene el valor null 
+    // if (!audio) return; // para la funcion cuando tiene el valor null 
     
-    audio.currenTime =  0; //
+    audio.currenTime =  1; //
     audio.play()
-    console.log(audio)
     key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
 
     }
@@ -219,8 +218,7 @@ function noteG(){
   audio.play()
   key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
   audio.addEventListener('ended', () => {
-      key.classList.remove('tocar')
-      
+     key.classList.remove('tocar') 
 })
 }
 
@@ -235,37 +233,20 @@ var botonStart = document.getElementById('melody1')
 var btn_melodia2 = document.getElementById('melody2')
 
 function melody01 (){
-  setTimeout(noteA, 1000)
-  setTimeout(noteB, 2000)
-  setTimeout(noteC, 3000)
-  setTimeout(noteD, 4000)
-  setTimeout(noteF, 5000)
-  
+ 
+ setTimeout(noteA, 1000)
+ setTimeout(noteB, 2000)
+ setTimeout(noteC, 3000)
+ setTimeout(noteD, 4000)
+ setTimeout(noteF, 5000)
+
+ window.addEventListener('keydown', function(e){
+    console.log(e.keyCode)
+ })
+
+
+
 }
-
-
-function melody02(){
-  const array = [noteA(), noteB(), noteC(), noteD(), noteC(), noteE()]
-    for (var i = 0; i <= 5; i++){
-    setTimeout(array[i](), 1000);
-    
-  }
-}
-
-function melody03(){
-var array_of_functions = [
-  function() { noteA() },
-  function() { noteG() },
-  function() { noteB() },
-  function() { noteC() }
-]
-
-for (i = 0; i < array_of_functions.length; i++) {
-  setTimeout(array_of_functions[i](), 10000);
-}
-}
-
-
 
 botonStart.addEventListener('click', melody01)
-btn_melodia2.addEventListener('click', melody03)
+// btn_melodia2.addEventListener('click', melody03)
