@@ -245,14 +245,27 @@ function melody01 (){
 
 
 function melody02(){
-  const array = [noteA, noteB, noteC, noteD, noteC, noteE]
-
-    array.forEach(item => setTimeout(item, 1000) )
+  const array = [noteA(), noteB(), noteC(), noteD(), noteC(), noteE()]
+    for (var i = 0; i <= 5; i++){
+    setTimeout(array[i](), 1000);
     
+  }
+}
+
+function melody03(){
+var array_of_functions = [
+  function() { noteA() },
+  function() { noteG() },
+  function() { noteB() },
+  function() { noteC() }
+]
+
+for (i = 0; i < array_of_functions.length; i++) {
+  setTimeout(array_of_functions[i](), 10000);
+}
 }
 
 
 
-
 botonStart.addEventListener('click', melody01)
-btn_melodia2.addEventListener('click', melody02)
+btn_melodia2.addEventListener('click', melody03)
