@@ -6,6 +6,7 @@
 _Mi primer Proyecto Piano Curso Cinta Blanca https://devf.la/_
 
 <table>
+    <caption>Teclas, Melodias y Keynote</caption>
     <tr>
     <th>Tecla</th>
     <th>Tono</th>
