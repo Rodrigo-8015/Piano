@@ -21,17 +21,13 @@ let traduccion = {
 }
 
 function playSound(e){
-    let audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-    let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`); // el $ concatena una funcion. 
-    // console.log(key.dataset.key);
-    if (!audio) return; // para la funcion cuando tiene el valor null 
-    
+    let audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); 
+    let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`); 
+    if (!audio) return; 
     texto.innerHTML = traduccion[key.dataset.key]
-    console.log(key)
-    audio.currenTime =  1; //
+    audio.currenTime =  1; 
     audio.play()
-    // console.log(audio)
-    key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR  
+    key.classList.add('tocar'); 
     setTimeout(delnner, 4000)
     
 }
@@ -41,10 +37,11 @@ function removerTransition(e){
         // console.log(e.propertyName);
         this.classList.remove('tocar');
         // console.log(this);
+        
 }
 
 function delnner(){
-  document.getElementById('notaTecla').innerHTML = "";
+ texto.innerHTML = "";
 }
 
 const keys  = document.querySelectorAll('.tecla');
@@ -60,13 +57,13 @@ window.addEventListener('keydown', playSound);
 
 function a1(){
 
-  let audio = document.querySelector('audio[data-key="72"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="72"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
+  let audio = document.querySelector('audio[data-key="72"]');
+  let key = document.querySelector('.tecla[data-key="72"]'); 
+  if (!audio) return; 
   texto.innerHTML = '"H"'
-  audio.currenTime =  0; //
+  audio.currenTime =  0; 
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar'); 
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -75,13 +72,13 @@ function a1(){
 
 function a2(){
 
-  let audio = document.querySelector('audio[data-key="86"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="86"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
+  let audio = document.querySelector('audio[data-key="86"]'); 
+  let key = document.querySelector('.tecla[data-key="86"]'); 
+  if (!audio) return; 
   texto.innerHTML = '"V"'
-  audio.currenTime =  0; //
+  audio.currenTime =  0; 
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar'); 
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -90,13 +87,13 @@ function a2(){
 
 function b1(){
 
-  let audio = document.querySelector('audio[data-key="74"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="74"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
+  let audio = document.querySelector('audio[data-key="74"]'); 
+  let key = document.querySelector('.tecla[data-key="74"]'); 
+  if (!audio) return; 
   texto.innerHTML = '"J"'
-  audio.currenTime =  0; //
+  audio.currenTime =  0; 
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar'); 
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -105,13 +102,13 @@ function b1(){
 
 function b2(){
 
-  let audio = document.querySelector('audio[data-key="66"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="66"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
+  let audio = document.querySelector('audio[data-key="66"]'); 
+  let key = document.querySelector('.tecla[data-key="66"]'); 
+  if (!audio) return; 
   texto.innerHTML = '"B"'
-  audio.currenTime =  0; //
+  audio.currenTime =  0; 
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar'); 
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -120,13 +117,13 @@ function b2(){
 
 function c1(){
 
-  let audio = document.querySelector('audio[data-key="65"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="65"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
+  let audio = document.querySelector('audio[data-key="65"]'); 
+  let key = document.querySelector('.tecla[data-key="65"]'); 
+  if (!audio) return; 
   texto.innerHTML = '"A"'
-  audio.currenTime =  0; //
+  audio.currenTime =  0; 
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar'); 
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -135,13 +132,13 @@ function c1(){
 
 function c2(){
 
-  let audio = document.querySelector('audio[data-key="75"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="75"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
+  let audio = document.querySelector('audio[data-key="75"]'); 
+  let key = document.querySelector('.tecla[data-key="75"]'); 
+  if (!audio) return; 
   texto.innerHTML = '"K"'
-  audio.currenTime =  0; //
+  audio.currenTime =  0; 
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar'); 
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -150,13 +147,13 @@ function c2(){
 
 function c3(){
 
-  let audio = document.querySelector('audio[data-key="78"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="78"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
+  let audio = document.querySelector('audio[data-key="78"]'); 
+  let key = document.querySelector('.tecla[data-key="78"]'); 
+  if (!audio) return; 
   texto.innerHTML = '"N"'
-  audio.currenTime =  0; //
+  audio.currenTime =  0; 
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar'); 
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -165,13 +162,13 @@ function c3(){
 
 function d1(){
 
-  let audio = document.querySelector('audio[data-key="83"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="83"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
+  let audio = document.querySelector('audio[data-key="83"]'); 
+  let key = document.querySelector('.tecla[data-key="83"]'); 
+  if (!audio) return; 
   texto.innerHTML = '"S"'
-  audio.currenTime =  0; //
+  audio.currenTime =  0; 
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar'); 
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -180,13 +177,13 @@ function d1(){
 
 function d2(){
 
-  let audio = document.querySelector('audio[data-key="76"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="76"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
+  let audio = document.querySelector('audio[data-key="76"]'); 
+  let key = document.querySelector('.tecla[data-key="76"]'); 
+  if (!audio) return; 
   texto.innerHTML = '"L"'
-  audio.currenTime =  0; //
+  audio.currenTime =  0; 
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar'); 
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -195,13 +192,13 @@ function d2(){
 
 function e1(){
 
-  let audio = document.querySelector('audio[data-key="68"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="68"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
+  let audio = document.querySelector('audio[data-key="68"]');
+  let key = document.querySelector('.tecla[data-key="68"]'); 
+  if (!audio) return; 
   texto.innerHTML = '"D"'
-  audio.currenTime =  0; //
+  audio.currenTime =  0; 
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar'); 
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -210,13 +207,13 @@ function e1(){
 
 function e2(){
 
-  let audio = document.querySelector('audio[data-key="192"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="192"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
-  texto.innerHTML = '"Ñ"'
-  audio.currenTime =  0; //
+  let audio = document.querySelector('audio[data-key="90"]'); 
+  let key = document.querySelector('.tecla[data-key="90"]'); 
+  if (!audio) return; 
+  texto.innerHTML = '"Z"'
+  audio.currenTime =  0; 
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar'); 
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -225,13 +222,13 @@ function e2(){
 
 function f1(){
 
-  let audio = document.querySelector('audio[data-key="70"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="70"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
+  let audio = document.querySelector('audio[data-key="70"]'); 
+  let key = document.querySelector('.tecla[data-key="70"]'); 
+  if (!audio) return; 
   texto.innerHTML = '"F"'
-  audio.currenTime =  0; //
+  audio.currenTime =  0;
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar');
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -240,13 +237,13 @@ function f1(){
 
 function f2(){
 
-  let audio = document.querySelector('audio[data-key="88"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="88"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
+  let audio = document.querySelector('audio[data-key="88"]'); 
+  let key = document.querySelector('.tecla[data-key="88"]');
+  if (!audio) return; 
   texto.innerHTML = '"X"'
-  audio.currenTime =  0; //
+  audio.currenTime =  0; 
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar'); 
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -255,13 +252,13 @@ function f2(){
 
 function g1(){
 
-  let audio = document.querySelector('audio[data-key="71"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="71"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
+  let audio = document.querySelector('audio[data-key="71"]'); 
+  let key = document.querySelector('.tecla[data-key="71"]');
+  if (!audio) return; 
   texto.innerHTML = '"G"'
-  audio.currenTime =  0; //
+  audio.currenTime =  0; 
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar'); 
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -270,13 +267,13 @@ function g1(){
 
 function g2(){
 
-  let audio = document.querySelector('audio[data-key="67"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
-  let key = document.querySelector('.tecla[data-key="67"]'); // el $ concatena una funcion. 
-  if (!audio) return; // para la funcion cuando tiene el valor null 
+  let audio = document.querySelector('audio[data-key="67"]');
+  let key = document.querySelector('.tecla[data-key="67"]'); 
+  if (!audio) return; 
   texto.innerHTML = '"C"'
-  audio.currenTime =  0; //
+  audio.currenTime =  0; 
   audio.play()
-  key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+  key.classList.add('tocar'); 
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
@@ -286,41 +283,41 @@ function g2(){
 /// Melodias Y Validaciones. ///
 
 //  tecla // funcion-tono // keynote  
-//    A       c1          65
+//    A       c1          65*
 //    S       d1          83
 //    D       e1          68
-//    F       f1          70
+//    F       f1          70*
 //    G       g1          71
-//    H       a1          72
+//    H       a1          72*
 //    J       b1          74
 //    K       c2          75
 //    L       d2          76
-//    Ñ       e2          90
+//    Z       e2          90
 //    X       f2          88
 //    C       g2          67
 //    V       a2          86
 //    B       b2          66
-//    N       c3          78
+//    N       c3          78*
     
 
 // melodia 1
 let validate1 = ['68','88','71','72','66'];
 let melodia1 =  [e1, f2, g1, a1, b2];
 // melodia 2
-let validate2 = ['68','88','71','72','66'];
-let melodia2 = [e1, f2, g1, a1, b2];
+let validate2 = ['65','88','74','67','66'];
+let melodia2 = [c1, f2, b1, g2, b2];
 // melodia 3...
-let validate3 = ['68','88','71','72','66'];
-let melodia3 = [e1, f2, g1, a1, b2];
+let validate3 = ['78','65','90','70','72'];
+let melodia3 = [c3, c1, e2, f1, a1];
 //melodia 4
-let validate4 = ['68','88','71','72','66'];
-let melodia4 = [e1, f2, g1, a1, b2];
+let validate4 = ['70','66','75','72','76'];
+let melodia4 = [f1, b2, c2, a1, d2];
 //melodia 5
-let validate5 = ['68','88','71','72','66'];
-let melodia5 = [e1, f2, g1, a1, b2];
+let validate5 = ['83','75','71','72','88'];
+let melodia5 = [d1, c2, g1, a1, f2];
 //melodia 6
-let validate6 = ['68','88','71','72','66'];
-let melodia6 = [e1, f2, g1, a1, b2];
+let validate6 = ['78','68','88','75','72'];
+let melodia6 = [c3, e1, f2, c2, a1];
 
 
 
@@ -335,7 +332,6 @@ function play5teclas (a, b, c, d, e){
   setTimeout(e, 5000);
 }
 
-
 // funcion de validacion
 
  function stop(){
@@ -344,10 +340,9 @@ function play5teclas (a, b, c, d, e){
   btn_game.classList.remove('gameOver');
   btn_game.classList.remove('botn1play');
   btn_game.innerHTML = 1;
-  document.getElementById('notaTecla').innerHTML = "";
+  texto.innerHTML = "";
   it = 0;
   user = [];
-  
  }
 
 function stop2(){
@@ -356,7 +351,9 @@ function stop2(){
   btn_game.classList.remove('gameOver');
   btn_game.classList.remove('botn2play');
   btn_game.innerHTML = 2;
-  document.getElementById('notaTecla').innerHTML = "";
+  texto.innerHTML = "";
+  it = 0;
+  user = [];
  }
 
  function stop3(){
@@ -365,7 +362,9 @@ function stop2(){
   btn_game.classList.remove('gameOver');
   btn_game.classList.remove('botn3play');
   btn_game.innerHTML = 3;
-  document.getElementById('notaTecla').innerHTML = "";
+  texto.innerHTML = "";
+  it = 0;
+  user = [];
  }
 
  function stop4(){
@@ -374,7 +373,9 @@ function stop2(){
   btn_game.classList.remove('gameOver');
   btn_game.classList.remove('botn4play');
   btn_game.innerHTML = 4;
-  document.getElementById('notaTecla').innerHTML = "";
+  texto.innerHTML = "";
+  it = 0;
+  user = [];
  }
 
  function stop5(){
@@ -383,7 +384,9 @@ function stop2(){
   btn_game.classList.remove('gameOver');
   btn_game.classList.remove('botn5play');
   btn_game.innerHTML = 5;
-  document.getElementById('notaTecla').innerHTML = "";
+  texto.innerHTML = "";
+  it = 0;
+  user = [];
  }
 
  function stop6(){
@@ -392,7 +395,9 @@ function stop2(){
   btn_game.classList.remove('gameOver');
   btn_game.classList.remove('botn6play');
   btn_game.innerHTML = 6;
-  document.getElementById('notaTecla').innerHTML = "";
+  texto.innerHTML = "";
+  it = 0;
+  user = [];
  }
 
 let it = 0;
@@ -407,23 +412,23 @@ function check1(e){
       
 
   user.push(val);
-  console.log(user);
-  console.log(btn_game);
+  // console.log(user);
+  // console.log(btn_game);
   if(user[it] !== validate1[it]){
-    
+    // console.log('perdiste');
     it = 0;
     user = [];
     
 
     btn_game.classList.add('gameOver');
     btn_game.innerHTML = "Game Over";
-    console.log(btn_game);
+    // console.log(btn_game);
     window.removeEventListener('keydown', check1);
     setTimeout(stop, 3000);
         
-  }if(user.length === validate1.length){
-    it = 0;
-    user = [];
+  }else if(user.length === validate1.length){
+    // console.log('ganaste');
+    //Boton de reset VERDE regresar al home, falta agregar
     btn_game.innerHTML = "Ganaste!!!";
     window.removeEventListener('keydown', check1);
     setTimeout(stop, 3000);
@@ -431,7 +436,6 @@ function check1(e){
   it += 1;
   // console.log(it)
 }
-
 
 // validacion segunda melodia
 
@@ -442,22 +446,22 @@ function check2(e){
       
   // console.log(key.dataset.key)
   user.push(val);
-  console.log(user);
-  console.log(btn_game);
+  // console.log(user);
+  // console.log(btn_game);
   if(user[it] !== validate2[it]){
-    console.log('perdiste');
+    // console.log('perdiste');
     it = 0;
     user = [];
     
     //Boton de reset ROJO regresar al home, falta agregar
     btn_game.classList.add('gameOver');
     btn_game.innerHTML = "Game Over";
-    console.log(btn_game);
+    // console.log(btn_game);
     window.removeEventListener('keydown', check2);
     setTimeout(stop2, 3000);
         
   }else if(user.length === validate2.length){
-    console.log('ganaste');
+    // console.log('ganaste');
     //Boton de reset VERDE regresar al home, falta agregar
     btn_game.innerHTML = "Ganaste!!!";
     window.removeEventListener('keydown', check2);
@@ -476,22 +480,22 @@ function check3(e){
       
   // console.log(key.dataset.key)
   user.push(val);
-  console.log(user);
-  console.log(btn_game);
+  // console.log(user);
+  // console.log(btn_game);
   if(user[it] !== validate3[it]){
-    console.log('perdiste');
+    // console.log('perdiste');
     it = 0;
     user = [];
     
     //Boton de reset ROJO regresar al home, falta agregar
     btn_game.classList.add('gameOver');
     btn_game.innerHTML = "Game Over";
-    console.log(btn_game);
+    // console.log(btn_game);
     window.removeEventListener('keydown', check3);
     setTimeout(stop3, 3000);
         
   }else if(user.length === validate3.length){
-    console.log('ganaste');
+    // console.log('ganaste');
     //Boton de reset VERDE regresar al home, falta agregar
     btn_game.innerHTML = "Ganaste!!!";
     window.removeEventListener('keydown', check3);
@@ -510,22 +514,22 @@ function check4(e){
       
   // console.log(key.dataset.key)
   user.push(val);
-  console.log(user);
-  console.log(btn_game);
+  // console.log(user);
+  // console.log(btn_game);
   if(user[it] !== validate4[it]){
-    console.log('perdiste');
+    // console.log('perdiste');
     it = 0;
     user = [];
     
     //Boton de reset ROJO regresar al home, falta agregar
     btn_game.classList.add('gameOver');
     btn_game.innerHTML = "Game Over";
-    console.log(btn_game);
+    // console.log(btn_game);
     window.removeEventListener('keydown', check4);
     setTimeout(stop4, 3000);
         
   }else if(user.length === validate4.length){
-    console.log('ganaste');
+    // console.log('ganaste');
     //Boton de reset VERDE regresar al home, falta agregar
     btn_game.innerHTML = "Ganaste!!!";
     window.removeEventListener('keydown', check4);
@@ -534,7 +538,6 @@ function check4(e){
   it += 1;
   // console.log(it)
 }
-
 
  // validacion quita melodia  
 
@@ -545,22 +548,22 @@ function check4(e){
       
   // console.log(key.dataset.key)
   user.push(val);
-  console.log(user);
-  console.log(btn_game);
+  // console.log(user);
+  // console.log(btn_game);
   if(user[it] !== validate5[it]){
-    console.log('perdiste');
+    // console.log('perdiste');
     it = 0;
     user = [];
     
     //Boton de reset ROJO regresar al home, falta agregar
     btn_game.classList.add('gameOver');
     btn_game.innerHTML = "Game Over";
-    console.log(btn_game);
+    // console.log(btn_game);
     window.removeEventListener('keydown', check5);
     setTimeout(stop5, 3000);
         
   }else if(user.length === validate5.length){
-    console.log('ganaste');
+    // console.log('ganaste');
     //Boton de reset VERDE regresar al home, falta agregar
     btn_game.innerHTML = "Ganaste!!!";
     window.removeEventListener('keydown', check5);
@@ -579,22 +582,22 @@ function check6(e){
       
   // console.log(key.dataset.key)
   user.push(val);
-  console.log(user);
-  console.log(btn_game);
+  // console.log(user);
+  // console.log(btn_game);
   if(user[it] !== validate6[it]){
-    console.log('perdiste');
+    // console.log('perdiste');
     it = 0;
     user = [];
     
     //Boton de reset ROJO regresar al home, falta agregar
     btn_game.classList.add('gameOver');
     btn_game.innerHTML = "Game Over";
-    console.log(btn_game);
+    // console.log(btn_game);
     window.removeEventListener('keydown', check6);
     setTimeout(stop6, 3000);
         
   }else if(user.length === validate6.length){
-    console.log('ganaste');
+    // console.log('ganaste');
     //Boton de reset VERDE regresar al home, falta agregar
     btn_game.innerHTML = "Ganaste!!!";
     window.removeEventListener('keydown', check6);
@@ -603,7 +606,6 @@ function check6(e){
   it += 1;
   // console.log(it)
 }
-
 
 // funciones de melodias. 
 
@@ -636,6 +638,7 @@ function melody03(){
     btn_game.innerHTML = "Playing"
 
 }
+
 function melody04(){
     play5teclas(...melodia4);
     window.addEventListener('keydown', check4);
@@ -647,6 +650,7 @@ function melody04(){
 
 
 }
+
 function melody05(){
     play5teclas(...melodia5);
     window.addEventListener('keydown', check5);
@@ -656,6 +660,7 @@ function melody05(){
     btn_game.innerHTML = "Playing"
 
 }
+
 function melody06(){
     play5teclas(...melodia6);
     window.addEventListener('keydown', check6);
