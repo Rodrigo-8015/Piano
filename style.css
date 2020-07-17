@@ -1,6 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&display=swap');
 
 
+@keyframes gameOver {
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+       box-shadow: red;
+       opacity: 1;
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+       box-shadow: 0 0 20px rgb(255, 18, 18);
+       opacity: 0;
+    }
+ }
+
+ @keyframes gameWin {
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+       box-shadow: rgb(255, 255, 255);
+       opacity: 1;
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+       box-shadow: 0 0 20px rgb(18, 148, 255);
+       opacity: 0;
+    }
+ }
+
+
+
 body{
     /* display: flex; */
     flex: 1;
@@ -210,6 +252,7 @@ span{
     transform: scale(1.0);
     border-color: #00e1ff;
     box-shadow: 0 0 1rem #0066ff;
+    
 }
 
 #melody2:hover{
@@ -217,6 +260,7 @@ span{
     transform: scale(1.0);
     border-color: #00ff9d;
     box-shadow: 0 0 1rem #00ff15;
+    
 }
 
 #melody3:hover{
@@ -224,6 +268,7 @@ span{
     transform: scale(1.0);
     border-color: #00e1ff;
     box-shadow: 0 0 1rem #fbff00;
+    
 }
 
 #melody4:hover{
@@ -231,6 +276,7 @@ span{
     transform: scale(1.0);
     border-color: #00e1ff;
     box-shadow: 0 0 1rem #ff0000;
+    
 }
 
 #melody5:hover{
@@ -238,6 +284,7 @@ span{
     transform: scale(1.0);
     border-color: #00e1ff;
     box-shadow: 0 0 1rem #cc00ff;
+    
 }
 
 #melody6:hover{
@@ -245,6 +292,73 @@ span{
     transform: scale(1.0);
     border-color: #00e1ff;
     box-shadow: 0 0 1rem #e3e4e6;
+    animation: radialmove 5s infinite;
+   
 }
 
+.alterno{
+    height: 200px;
+    width: 90%;
+    /* border: white solid 3px; */
+    display: flex;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: #1c1c1d;
+    padding: 10px;
+    z-index: -1;
+}
 
+.botn1play{
+    transform: scale(1.0);
+    border-color: #00e1ff;
+    box-shadow: 0 0 1rem #0066ff;
+}
+
+.botn2play{
+    transform: scale(1.0);
+    border-color: #00ff9d;
+    box-shadow: 0 0 1rem #00ff15;
+}
+
+.botn3play{
+    transform: scale(1.0);
+    border-color: #00e1ff;
+    box-shadow: 0 0 1rem #fbff00;
+}
+
+.botn4play{
+    transform: scale(1.0);
+    border-color: #00e1ff;
+    box-shadow: 0 0 1rem #ff0000;
+}
+
+.botn5play{
+
+    transform: scale(1.0);
+    border-color: #00e1ff;
+    box-shadow: 0 0 1rem #cc00ff;
+}
+
+.botn6play{
+    transform: scale(1.0);
+    border-color: #00e1ff;
+    box-shadow: 0 0 1rem #e3e4e6;
+    animation: radialmove 5s infinite;
+}
+
+.gameOver{
+    background-color: red;
+    transform: scale(1.0);
+    border-color: #ff0000;
+    box-shadow: 0 0 1rem #ff0000;
+    animation: gameOver 1.5s infinite;
+}
+
+.gameWin{
+    background-color: rgb(221, 221, 221);
+    transform: scale(1.0);
+    border-color: #00d369;
+    box-shadow: 0 0 1rem #fcfcfc;
+    animation: gameWin 1.5s infinite; 
+
+}

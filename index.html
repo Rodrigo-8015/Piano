@@ -23,13 +23,13 @@
 
 <!-- SELECTOR DE MELODIA -->
     <div class="options_padre">
-        <div class="options">
-            <div id="melody1" onclick="location.href='#';" style="cursor: pointer;">1</div>
-            <div id="melody2" onclick="location.href='#';" style="cursor: pointer;">2</div>
-            <div id="melody3" onclick="location.href='#';" style="cursor: pointer;">3</div>  
-            <div id="melody4" onclick="location.href='#';" style="cursor: pointer;">4</div>
-            <div id="melody5" onclick="location.href='#';" style="cursor: pointer;">5</div>
-            <div id="melody6" onclick="location.href='#';" style="cursor: pointer;">6</div>  
+            <div class="options">
+            <div class="" id="melody1" onclick="location.href='#';" style="cursor: pointer;">1</div>
+            <div class="" id="melody2" onclick="location.href='#';" style="cursor: pointer;">2</div>
+            <div class="" id="melody3" onclick="location.href='#';" style="cursor: pointer;">3</div>  
+            <div class="" id="melody4" onclick="location.href='#';" style="cursor: pointer;">4</div>
+            <div class="" id="melody5" onclick="location.href='#';" style="cursor: pointer;">5</div>
+            <div class="" id="melody6" onclick="location.href='#';" style="cursor: pointer;">6</div>  
         </div>
     </div>
     
@@ -38,7 +38,7 @@
 <!--AQUI COMIENZA EL PIANO -->
     <div class="piano">
         <div class="nota">
-            <h2 id="notaTecla">#</h2>
+            <h2 id="notaTecla"><kbd>#</kbd></h2>
         </div>
         <div class="case"> 
             <div class="Teclado">
@@ -70,7 +70,7 @@
                         <span>G</span>
                     </div>
         
-                    <div data-key="72" class="tecla">
+                    <div id="noteA" data-key="72" class="tecla">
                         <span>A</span>
                     </div>
         
@@ -135,7 +135,7 @@
         </div>
     </div>
     
-
+    
 <!-- aqui va cada sonido dependiendo la tecla -->
 
 <<<<<<< HEAD
@@ -174,7 +174,7 @@
 <audio data-key="71" src="assets/notes/G1.wav"></audio>
 <audio data-key="72" src="assets/notes/A1.wav"></audio>
 <audio data-key="74" src="assets/notes/B1.wav"></audio>
-<audio data-key="75" src="assets/notes/c2.wav"></audio>k
+<audio data-key="75" src="assets/notes/c2.wav"></audio>
 <audio data-key="76" src="assets/notes/D2.wav"></audio>
 <audio data-key="192" src="assets/notes/E2.wav"></audio>
 <audio data-key="88" src="assets/notes/F2.wav"></audio>
