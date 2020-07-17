@@ -3,25 +3,29 @@
 function playSound(e){
     let audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
     let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`); // el $ concatena una funcion. 
+    console.log(key.dataset.key);
     if (!audio) return; // para la funcion cuando tiene el valor null 
     
     audio.currenTime =  0; //
     audio.play()
+    // console.log(audio)
     key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
-
-    }
-
-    function removerTransition(e){    
+}
+     
+function removerTransition(e){               
         if(e.propertyName !== 'transform' ) return;
         console.log(e.propertyName);
         this.classList.remove('tocar');
-        console.log(this);
-    }
-    const keys  = document.querySelectorAll('.tecla');
-    keys.forEach(key => key.addEventListener('transitionend', removerTransition))
+        // console.log(this);
+}
+
+      
+const keys  = document.querySelectorAll('.tecla');
+keys.forEach(key => key.addEventListener('transitionend', removerTransition))
 
 window.addEventListener('keydown', playSound);
 
+// aqui inician las melodias. 
 
 // aqui incician las melodias. 
 
@@ -222,14 +226,96 @@ function noteG(){
 
 // melodias
 
+let btn_melodia1 = document.getElementById('melody1')
+let btn_melodia2 = document.getElementById('melody2')
+let btn_melodia3 = document.getElementById('melody3')
+let btn_melodia4 = document.getElementById('melody4')
+let btn_melodia5 = document.getElementById('melody5')
+let btn_melodia6 = document.getElementById('melody6')
+
+
+
+let validate1 = ['72','74','65','76','88'];
+let validate2 = [];
+let it = 0;
+let user =[];
+
 function melody01 (){
-    let sequence = ['c','d','e','f']
-    setTimeout(noteC, 1000)
-    setTimeout(noteD, 2000)
-    setTimeout(noteE, 3000)
-    setTimeout(noteF, 4000)
+  setTimeout(noteA, 1000)
+  setTimeout(noteB, 2000)
+  setTimeout(noteC, 3000)
+  setTimeout(noteD, 4000)
+  setTimeout(noteF, 5000)
+ 
+  window.addEventListener('keydown', check1);
+}
+function check1(e){
+  let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
+  let val = key.dataset.key;
+  console.log(key.dataset.key)
+  user.push(val)
+  console.log(user)
+  if(user[it] !== validate1[it]){
+    console.log('perdiste')
+    it = 0;
+    user = [];
+    //Boton de reset ROJO regresar al home, falta agregar
+  }
+  if(user.length === validate1.length){
+    console.log('ganaste')
+    //Boton de reset VERDE regresar al home, falta agregar
+  }
+  it += 1;
+  // console.log(it)
+}
+
+
+function melody02(){
+  setTimeout(noteC, 1000)
+  setTimeout(noteB, 2000)
+  setTimeout(noteC, 3000)
+  setTimeout(noteD, 4000)
+  setTimeout(noteE, 5000)
+  }
+
+
+function melody03(){
+  setTimeout(noteG, 1000)
+  setTimeout(noteA, 2000)
+  setTimeout(noteC, 3000)
+  setTimeout(noteD, 4000)
+  setTimeout(noteE, 5000)
+}
+
+function melody04(){
+  setTimeout(noteA, 1000)
+  setTimeout(noteG, 2000)
+  setTimeout(noteG, 3000)
+  setTimeout(noteD, 4000)
+  setTimeout(noteE, 5000)
+}
+
+function melody05(){
+  setTimeout(noteA, 1000)
+  setTimeout(noteF, 2000)
+  setTimeout(noteC, 3000)
+  setTimeout(noteD, 4000)
+  setTimeout(noteA, 5000)
+}
+
+function melody06(){
+  setTimeout(noteG, 1000)
+  setTimeout(noteD, 2000)
+  setTimeout(noteA, 3000)
+  setTimeout(noteB, 4000)
+  setTimeout(noteF, 5000)
 }
 
 
 
-botonStart.addEventListener('click', melody01)
+btn_melodia1.addEventListener('click', melody01)
+btn_melodia2.addEventListener('click', melody02)
+btn_melodia3.addEventListener('click', melody03)
+btn_melodia4.addEventListener('click', melody04)
+btn_melodia5.addEventListener('click', melody05)
+btn_melodia6.addEventListener('click', melody06)
