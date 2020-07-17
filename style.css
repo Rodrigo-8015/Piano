@@ -21,28 +21,6 @@
     }
  }
 
- @keyframes gameWin {
-    0%,
-    20%,
-    40%,
-    60%,
-    80%,
-    100% {
-       box-shadow: rgb(255, 255, 255);
-       opacity: 1;
-    }
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-       box-shadow: 0 0 20px rgb(18, 148, 255);
-       opacity: 0;
-    }
- }
-
-
-
 body{
     /* display: flex; */
     flex: 1;
