@@ -55,7 +55,7 @@ body{
 }
 
 .piano{
-    /* border: solid 4px black; */
+    /* border: solid 4px white; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,6 +64,7 @@ body{
 
 .Teclado{
     display: flex;
+    justify-content: center;
     /* border: solid 2px black; */
 }
 .case{
@@ -85,7 +86,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     color: white;
+}
+
+.texto{
+    font-size: small;
+    text-align: center;
 }
 
 .A{
