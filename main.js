@@ -12,7 +12,7 @@ let traduccion = {
   74: 'J',
   75: 'K',
   76: 'L',
-  186: 'Ñ',
+  90: 'Z',
   88: 'X',
   67: 'C',
   86: 'V',
@@ -32,6 +32,8 @@ function playSound(e){
     audio.play()
     // console.log(audio)
     key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR  
+    setTimeout(delnner, 4000)
+    
 }
      
 function removerTransition(e){               
@@ -41,7 +43,10 @@ function removerTransition(e){
         // console.log(this);
 }
 
-      
+function delnner(){
+  document.getElementById('notaTecla').innerHTML = "";
+}
+
 const keys  = document.querySelectorAll('.tecla');
 keys.forEach(key => key.addEventListener('transitionend', removerTransition))
 
@@ -290,7 +295,7 @@ function g2(){
 //    J       b1          74
 //    K       c2          75
 //    L       d2          76
-//    Ñ       e2          192
+//    Ñ       e2          90
 //    X       f2          88
 //    C       g2          67
 //    V       a2          86
@@ -319,6 +324,7 @@ let melodia6 = [e1, f2, g1, a1, b2];
 
 
 
+
 // funcion de SetTimeOUT con arreglo
 
 function play5teclas (a, b, c, d, e){
@@ -329,6 +335,7 @@ function play5teclas (a, b, c, d, e){
   setTimeout(e, 5000);
 }
 
+
 // funcion de validacion
 
  function stop(){
@@ -337,8 +344,54 @@ function play5teclas (a, b, c, d, e){
   btn_game.classList.remove('gameOver');
   btn_game.classList.remove('botn1play');
   btn_game.innerHTML = 1;
+  document.getElementById('notaTecla').innerHTML = "";
+  
  }
 
+function stop2(){
+  let btn_game = document.getElementById('melody2');
+  btn_game.classList.remove('gamewin');
+  btn_game.classList.remove('gameOver');
+  btn_game.classList.remove('botn2play');
+  btn_game.innerHTML = 2;
+  document.getElementById('notaTecla').innerHTML = "";
+ }
+
+ function stop3(){
+  let btn_game = document.getElementById('melody3');
+  btn_game.classList.remove('gamewin');
+  btn_game.classList.remove('gameOver');
+  btn_game.classList.remove('botn3play');
+  btn_game.innerHTML = 3;
+  document.getElementById('notaTecla').innerHTML = "";
+ }
+
+ function stop4(){
+  let btn_game = document.getElementById('melody4');
+  btn_game.classList.remove('gamewin');
+  btn_game.classList.remove('gameOver');
+  btn_game.classList.remove('botn4play');
+  btn_game.innerHTML = 4;
+  document.getElementById('notaTecla').innerHTML = "";
+ }
+
+ function stop5(){
+  let btn_game = document.getElementById('melody5');
+  btn_game.classList.remove('gamewin');
+  btn_game.classList.remove('gameOver');
+  btn_game.classList.remove('botn5play');
+  btn_game.innerHTML = 5;
+  document.getElementById('notaTecla').innerHTML = "";
+ }
+
+ function stop6(){
+  let btn_game = document.getElementById('melody6');
+  btn_game.classList.remove('gamewin');
+  btn_game.classList.remove('gameOver');
+  btn_game.classList.remove('botn6play');
+  btn_game.innerHTML = 6;
+  document.getElementById('notaTecla').innerHTML = "";
+ }
 
 let it = 0;
 let user =[];
@@ -381,50 +434,70 @@ function check1(e){
 // validacion segunda melodia
 
 function check2(e){
-    let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
-    let val = key.dataset.key;
-    // console.log(key.dataset.key);
-    user.push(val);
-    console.log(user);
-    if(user[it] !== validate2[it]){
-      console.log('perdiste');
-      it = 0;
-      user = [];
-      }
-    if(user.length === validate2.length){
-      console.log('ganaste');
-      //Boton de reset VERDE regresar al home, falta agregar
-    }
-    it += 1;
-    // console.log(it)
+  let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
+  let val = key.dataset.key;
+  let btn_game = document.getElementById('melody2');
+      
+  // console.log(key.dataset.key)
+  user.push(val);
+  console.log(user);
+  console.log(btn_game);
+  if(user[it] !== validate2[it]){
+    console.log('perdiste');
+    it = 0;
+    user = [];
+    
+    //Boton de reset ROJO regresar al home, falta agregar
+    btn_game.classList.add('gameOver');
+    btn_game.innerHTML = "Game Over";
+    console.log(btn_game);
+    window.removeEventListener('keydown', check2);
+    setTimeout(stop2, 3000);
+        
+  }else if(user.length === validate2.length){
+    console.log('ganaste');
+    //Boton de reset VERDE regresar al home, falta agregar
+    btn_game.innerHTML = "Ganaste!!!";
+    window.removeEventListener('keydown', check2);
+    setTimeout(stop2, 3000);
   }
   it += 1;
   // console.log(it)
-
+}
 
 // validacion tercera melodia
 
-  function check3(e){
-    let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
-    let val = key.dataset.key;
-    // console.log(key.dataset.key);
-    user.push(val);
-    console.log(user);
-    if(user[it] !== validate3[it]){
-      console.log('perdiste');
-      it = 0;
-      user = [];
-      //Boton de reset ROJO regresar al home, falta agregar
-    }
-    if(user.length === validate3.length){
-      console.log('ganaste')
-      //Boton de reset VERDE regresar al home, falta agregar
-    }
-    it += 1;
-    // console.log(it)
+function check3(e){
+  let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
+  let val = key.dataset.key;
+  let btn_game = document.getElementById('melody3');
+      
+  // console.log(key.dataset.key)
+  user.push(val);
+  console.log(user);
+  console.log(btn_game);
+  if(user[it] !== validate3[it]){
+    console.log('perdiste');
+    it = 0;
+    user = [];
+    
+    //Boton de reset ROJO regresar al home, falta agregar
+    btn_game.classList.add('gameOver');
+    btn_game.innerHTML = "Game Over";
+    console.log(btn_game);
+    window.removeEventListener('keydown', check3);
+    setTimeout(stop3, 3000);
+        
+  }else if(user.length === validate3.length){
+    console.log('ganaste');
+    //Boton de reset VERDE regresar al home, falta agregar
+    btn_game.innerHTML = "Ganaste!!!";
+    window.removeEventListener('keydown', check3);
+    setTimeout(stop3, 3000);
   }
   it += 1;
   // console.log(it)
+}
 
 // validacion cuarta melodia
 
@@ -434,32 +507,32 @@ function check4(e){
   let btn_game = document.getElementById('melody4');
       
   // console.log(key.dataset.key)
-  user.push(val)
-  console.log(user)
-  console.log(btn_game)
+  user.push(val);
+  console.log(user);
+  console.log(btn_game);
   if(user[it] !== validate4[it]){
-    console.log('perdiste')
+    console.log('perdiste');
     it = 0;
     user = [];
     
     //Boton de reset ROJO regresar al home, falta agregar
     btn_game.classList.add('gameOver');
-    btn_game.innerHTML = "Game Over"
+    btn_game.innerHTML = "Game Over";
     console.log(btn_game);
     window.removeEventListener('keydown', check4);
-    setTimeout(stop, 3000);
+    setTimeout(stop4, 3000);
         
-  }else if(user.length === validate3.length){
+  }else if(user.length === validate4.length){
     console.log('ganaste');
     //Boton de reset VERDE regresar al home, falta agregar
-    btn_game.innerHTML = "Ganaste!!!"
+    btn_game.innerHTML = "Ganaste!!!";
     window.removeEventListener('keydown', check4);
-    setTimeout(stop, 3000);
-    
+    setTimeout(stop4, 3000);
   }
   it += 1;
   // console.log(it)
 }
+
 
  // validacion quita melodia  
 
@@ -469,32 +542,32 @@ function check4(e){
   let btn_game = document.getElementById('melody5');
       
   // console.log(key.dataset.key)
-  user.push(val)
-  console.log(user)
-  console.log(btn_game)
+  user.push(val);
+  console.log(user);
+  console.log(btn_game);
   if(user[it] !== validate5[it]){
-    console.log('perdiste')
+    console.log('perdiste');
     it = 0;
     user = [];
     
     //Boton de reset ROJO regresar al home, falta agregar
     btn_game.classList.add('gameOver');
-    btn_game.innerHTML = "Game Over"
+    btn_game.innerHTML = "Game Over";
     console.log(btn_game);
     window.removeEventListener('keydown', check5);
-    setTimeout(stop, 3000);
+    setTimeout(stop5, 3000);
         
-  }else if(user.length === validate3.length){
+  }else if(user.length === validate5.length){
     console.log('ganaste');
     //Boton de reset VERDE regresar al home, falta agregar
-    btn_game.innerHTML = "Ganaste!!!"
+    btn_game.innerHTML = "Ganaste!!!";
     window.removeEventListener('keydown', check5);
-    setTimeout(stop, 3000);
-    
+    setTimeout(stop5, 3000);
   }
   it += 1;
   // console.log(it)
 }
+
 // validacion sexta melodia
 
 function check6(e){
@@ -503,33 +576,31 @@ function check6(e){
   let btn_game = document.getElementById('melody6');
       
   // console.log(key.dataset.key)
-  user.push(val)
-  console.log(user)
-  console.log(btn_game)
+  user.push(val);
+  console.log(user);
+  console.log(btn_game);
   if(user[it] !== validate6[it]){
-    console.log('perdiste')
+    console.log('perdiste');
     it = 0;
     user = [];
     
     //Boton de reset ROJO regresar al home, falta agregar
     btn_game.classList.add('gameOver');
-    btn_game.innerHTML = "Game Over"
+    btn_game.innerHTML = "Game Over";
     console.log(btn_game);
     window.removeEventListener('keydown', check6);
-    setTimeout(stop, 3000);
+    setTimeout(stop6, 3000);
         
   }else if(user.length === validate6.length){
     console.log('ganaste');
     //Boton de reset VERDE regresar al home, falta agregar
-    btn_game.innerHTML = "Ganaste!!!"
+    btn_game.innerHTML = "Ganaste!!!";
     window.removeEventListener('keydown', check6);
-    setTimeout(stop, 3000);
-    
+    setTimeout(stop6, 3000);
   }
   it += 1;
   // console.log(it)
 }
-
 
 
 // funciones de melodias. 
@@ -540,7 +611,7 @@ function melody01(){
     let btn_game = document.getElementById('melody1');
     btn_game.classList.remove('gameOver')
     btn_game.classList.add('botn1play')
-    btn_game.innerHTML = "Start"
+    btn_game.innerHTML = "Playing"
 
 }
 
@@ -550,7 +621,7 @@ function melody02(){
     let btn_game = document.getElementById('melody2');
     btn_game.classList.remove('gameOver')
     btn_game.classList.add('botn2play')
-    btn_game.innerHTML = "Start"
+    btn_game.innerHTML = "Playing"
 
 }
 
@@ -560,7 +631,7 @@ function melody03(){
     let btn_game = document.getElementById('melody3');
     btn_game.classList.remove('gameOver')
     btn_game.classList.add('botn3play')
-    btn_game.innerHTML = "Start"
+    btn_game.innerHTML = "Playing"
 
 }
 function melody04(){
@@ -569,7 +640,7 @@ function melody04(){
     let btn_game = document.getElementById('melody4');
     btn_game.classList.remove('gameOver')
     btn_game.classList.add('botn4play')
-    btn_game.innerHTML = "Start"
+    btn_game.innerHTML = "Playing"
     
 
 
@@ -580,7 +651,7 @@ function melody05(){
     let btn_game = document.getElementById('melody5');
     btn_game.classList.remove('gameOver')
     btn_game.classList.add('botn5play')
-    btn_game.innerHTML = "Start"
+    btn_game.innerHTML = "Playing"
 
 }
 function melody06(){
@@ -589,7 +660,7 @@ function melody06(){
     let btn_game = document.getElementById('melody6');
     btn_game.classList.remove('gameOver')
     btn_game.classList.add('botn6play')
-    btn_game.innerHTML = "Start"
+    btn_game.innerHTML = "Playing"
 
 }
 
