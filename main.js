@@ -1,5 +1,24 @@
 
 // musica libre 
+let texto = document.getElementById('notaTecla')
+
+let traduccion = {
+  65: 'A',
+  83: 'S',
+  68: 'D',
+  70: 'F',
+  71: 'G',
+  72: 'H',
+  74: 'J',
+  75: 'K',
+  76: 'L',
+  186: 'Ñ',
+  88: 'X',
+  67: 'C',
+  86: 'V',
+  66: 'B',
+  78: 'N'
+}
 
 function playSound(e){
     let audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
@@ -7,10 +26,12 @@ function playSound(e){
     // console.log(key.dataset.key);
     if (!audio) return; // para la funcion cuando tiene el valor null 
     
+    texto.innerHTML = traduccion[key.dataset.key]
+    console.log(key)
     audio.currenTime =  1; //
     audio.play()
     // console.log(audio)
-    key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
+    key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR  
 }
      
 function removerTransition(e){               
@@ -26,11 +47,9 @@ keys.forEach(key => key.addEventListener('transitionend', removerTransition))
 
 window.addEventListener('keydown', playSound);
 
+
+
 // aqui inician las melodias. 
-
-let texto = document.getElementById('notaTecla')
-
-
 
 //TECLAS MAYORES
 
@@ -46,7 +65,7 @@ function a1(){
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 function a2(){
@@ -61,7 +80,7 @@ function a2(){
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 function b1(){
@@ -76,7 +95,7 @@ function b1(){
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 function b2(){
@@ -91,7 +110,7 @@ function b2(){
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 function c1(){
@@ -106,7 +125,7 @@ function c1(){
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 function c2(){
@@ -121,7 +140,7 @@ function c2(){
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 function c3(){
@@ -136,7 +155,7 @@ function c3(){
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 function d1(){
@@ -151,7 +170,7 @@ function d1(){
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 function d2(){
@@ -166,7 +185,7 @@ function d2(){
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 function e1(){
@@ -181,7 +200,7 @@ function e1(){
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 function e2(){
@@ -196,7 +215,7 @@ function e2(){
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 function f1(){
@@ -211,7 +230,7 @@ function f1(){
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 function f2(){
@@ -226,7 +245,7 @@ function f2(){
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 function g1(){
@@ -234,14 +253,14 @@ function g1(){
   let audio = document.querySelector('audio[data-key="71"]'); //se cambia el tipo de encomillado, para poder agregar a la contante la vaiable e ahora conoces tres, "", '' , ` `   <--- fijate para donde van 
   let key = document.querySelector('.tecla[data-key="71"]'); // el $ concatena una funcion. 
   if (!audio) return; // para la funcion cuando tiene el valor null 
-  texto.innerHTML = '"X"'
+  texto.innerHTML = '"G"'
   audio.currenTime =  0; //
   audio.play()
   key.classList.add('tocar'); // CAMBIA EL VALOR DE KEY POR EL CSS DE TOCAR
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 function g2(){
@@ -256,7 +275,7 @@ function g2(){
   audio.addEventListener('ended', () => {
       key.classList.remove('tocar')
       
-})
+  })
 }
 
 /// Melodias Y Validaciones. ///
@@ -303,12 +322,11 @@ let melodia6 = [e1, f2, g1, a1, b2];
 // funcion de SetTimeOUT con arreglo
 
 function play5teclas (a, b, c, d, e){
-  setTimeout(a, 1000)
-  setTimeout(b, 2000)
-  setTimeout(c, 3000)
-  setTimeout(d, 4000)
-  setTimeout(e, 5000)
-
+  setTimeout(a, 1000);
+  setTimeout(b, 2000);
+  setTimeout(c, 3000);
+  setTimeout(d, 4000);
+  setTimeout(e, 5000);
 }
 
 // funcion de validacion
@@ -318,8 +336,7 @@ function play5teclas (a, b, c, d, e){
   btn_game.classList.remove('gamewin');
   btn_game.classList.remove('gameOver');
   btn_game.classList.remove('botn1play');
-  btn_game.innerHTML = 1
-  
+  btn_game.innerHTML = 1;
  }
 
 
@@ -334,17 +351,17 @@ function check1(e){
   let btn_game = document.getElementById('melody1');
       
   // console.log(key.dataset.key)
-  user.push(val)
-  console.log(user)
-  console.log(btn_game)
+  user.push(val);
+  console.log(user);
+  console.log(btn_game);
   if(user[it] !== validate1[it]){
-    console.log('perdiste')
+    console.log('perdiste');
     it = 0;
     user = [];
     
     //Boton de reset ROJO regresar al home, falta agregar
     btn_game.classList.add('gameOver');
-    btn_game.innerHTML = "Game Over"
+    btn_game.innerHTML = "Game Over";
     console.log(btn_game);
     window.removeEventListener('keydown', check1);
     setTimeout(stop, 3000);
@@ -352,11 +369,9 @@ function check1(e){
   }else if(user.length === validate1.length){
     console.log('ganaste');
     //Boton de reset VERDE regresar al home, falta agregar
-    btn_game.innerHTML = "Ganaste!!!"
+    btn_game.innerHTML = "Ganaste!!!";
     window.removeEventListener('keydown', check1);
     setTimeout(stop, 3000);
-    
-
   }
   it += 1;
   // console.log(it)
@@ -368,17 +383,16 @@ function check1(e){
 function check2(e){
     let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
     let val = key.dataset.key;
-    console.log(key.dataset.key)
-    user.push(val)
-    console.log(user)
+    // console.log(key.dataset.key);
+    user.push(val);
+    console.log(user);
     if(user[it] !== validate2[it]){
-      console.log('perdiste')
+      console.log('perdiste');
       it = 0;
       user = [];
-
       }
     if(user.length === validate2.length){
-      console.log('ganaste')
+      console.log('ganaste');
       //Boton de reset VERDE regresar al home, falta agregar
     }
     it += 1;
@@ -390,11 +404,11 @@ function check2(e){
   function check3(e){
     let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
     let val = key.dataset.key;
-    console.log(key.dataset.key)
-    user.push(val)
-    console.log(user)
+    // console.log(key.dataset.key);
+    user.push(val);
+    console.log(user);
     if(user[it] !== validate3[it]){
-      console.log('perdiste')
+      console.log('perdiste');
       it = 0;
       user = [];
       //Boton de reset ROJO regresar al home, falta agregar
