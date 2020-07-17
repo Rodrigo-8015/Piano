@@ -21,6 +21,9 @@
     }
  }
 
+
+
+
 body{
     /* display: flex; */
     flex: 1;
@@ -48,7 +51,7 @@ body{
 .case{
     /* border: white 3px solid; */
     height: 300px;
-    width: 60%;
+    width: 1200px;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -66,6 +69,7 @@ body{
     align-items: center;
     flex-direction: column;
     color: white;
+    box-shadow: #1c1c1d;
 }
 
 .texto{
