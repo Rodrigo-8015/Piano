@@ -65,6 +65,7 @@ body{
     /* border: white 3px solid; */
     margin-right: 20px;
     display: flex;
+    position: static;
     justify-content: center;
     align-items: center;
     flex-direction: column;

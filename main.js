@@ -28,8 +28,7 @@ function playSound(e){
     audio.currenTime =  1; 
     audio.play()
     key.classList.add('tocar'); 
-    setTimeout(delnner, 4000)
-    
+       
 }
      
 function removerTransition(e){               
@@ -41,13 +40,17 @@ function removerTransition(e){
 }
 
 function delnner(){
- texto.innerHTML = "";
+  setTimeout(function(){
+    texto.innerHTML = ""
+  },3000)
 }
 
 const keys  = document.querySelectorAll('.tecla');
 keys.forEach(key => key.addEventListener('transitionend', removerTransition))
 
 window.addEventListener('keydown', playSound);
+
+window.addEventListener('keydown', delnner)
 
 
 
@@ -320,8 +323,6 @@ let validate6 = ['78','68','88','75','72'];
 let melodia6 = [c3, e1, f2, c2, a1];
 
 
-
-
 // funcion de SetTimeOUT con arreglo
 
 function play5teclas (a, b, c, d, e){
@@ -330,6 +331,20 @@ function play5teclas (a, b, c, d, e){
   setTimeout(c, 3000);
   setTimeout(d, 4000);
   setTimeout(e, 5000);
+}
+
+function playdemo (a, b, c, d, e, f, g, h, i, j, k){
+  setTimeout(a, 1000);
+  setTimeout(b, 2000);
+  setTimeout(c, 3000);
+  setTimeout(d, 4000);
+  setTimeout(e, 5000);
+  setTimeout(f, 6000);
+  setTimeout(g, 7000);
+  setTimeout(h, 8000);
+  setTimeout(i, 9000);
+  setTimeout(j, 10000);
+  setTimeout(k, 11000);
 }
 
 // funcion de validacion
@@ -670,6 +685,7 @@ function melody06(){
     btn_game.innerHTML = "Playing"
 
 }
+
 
 //declaramos los botones de melodias. 
 
