@@ -3,7 +3,7 @@
 
 ## Comenzando 🚀
 
-_Mi primer Proyecto Piano Curso Cinta Blanca https://devf.la/_
+_Proyecto: Piano, Curso "Cinta Blanca" https://devf.la/_
 
 <table>
     <caption>Teclas, Melodias y Keynote</caption>
