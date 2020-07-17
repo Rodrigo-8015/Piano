@@ -366,112 +366,176 @@ function check1(e){
 // validacion segunda melodia
 
 function check2(e){
-    let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
-    let val = key.dataset.key;
-    console.log(key.dataset.key)
-    user.push(val)
-    console.log(user)
-    if(user[it] !== validate2[it]){
-      console.log('perdiste')
-      it = 0;
-      user = [];
+  let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
+  let val = key.dataset.key;
+  let btn_game = document.getElementById('melody2');
+      
+  // console.log(key.dataset.key)
+  user.push(val)
+  console.log(user)
+  console.log(btn_game)
+  if(user[it] !== validate2[it]){
+    console.log('perdiste')
+    it = 0;
+    user = [];
+    
+    //Boton de reset ROJO regresar al home, falta agregar
+    btn_game.classList.add('gameOver');
+    btn_game.innerHTML = "Game Over"
+    console.log(btn_game);
+    window.removeEventListener('keydown', check2);
+    setTimeout(stop, 3000);
+        
+  }else if(user.length === validate2.length){
+    console.log('ganaste');
+    //Boton de reset VERDE regresar al home, falta agregar
+    btn_game.innerHTML = "Ganaste!!!"
+    window.removeEventListener('keydown', check2);
+    setTimeout(stop, 3000);
+    
 
-      }
-    if(user.length === validate2.length){
-      console.log('ganaste')
-      //Boton de reset VERDE regresar al home, falta agregar
-    }
-    it += 1;
-    // console.log(it)
   }
+  it += 1;
+  // console.log(it)
+}
 
 // validacion tercera melodia
 
-  function check3(e){
-    let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
-    let val = key.dataset.key;
-    console.log(key.dataset.key)
-    user.push(val)
-    console.log(user)
-    if(user[it] !== validate3[it]){
-      console.log('perdiste')
-      it = 0;
-      user = [];
-      //Boton de reset ROJO regresar al home, falta agregar
-    }
-    if(user.length === validate3.length){
-      console.log('ganaste')
-      //Boton de reset VERDE regresar al home, falta agregar
-    }
-    it += 1;
-    // console.log(it)
+function check3(e){
+  let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
+  let val = key.dataset.key;
+  let btn_game = document.getElementById('melody3');
+      
+  // console.log(key.dataset.key)
+  user.push(val)
+  console.log(user)
+  console.log(btn_game)
+  if(user[it] !== validate3[it]){
+    console.log('perdiste')
+    it = 0;
+    user = [];
+    
+    //Boton de reset ROJO regresar al home, falta agregar
+    btn_game.classList.add('gameOver');
+    btn_game.innerHTML = "Game Over"
+    console.log(btn_game);
+    window.removeEventListener('keydown', check3);
+    setTimeout(stop, 3000);
+        
+  }else if(user.length === validate3.length){
+    console.log('ganaste');
+    //Boton de reset VERDE regresar al home, falta agregar
+    btn_game.innerHTML = "Ganaste!!!"
+    window.removeEventListener('keydown', check3);
+    setTimeout(stop, 3000);
+    
   }
-
+  it += 1;
+  // console.log(it)
+}
 // validacion cuarta melodia
 
-  function check4(e){
-    let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
-    let val = key.dataset.key;
-    console.log(key.dataset.key)
-    user.push(val)
-    console.log(user)
-    if(user[it] !== validate4[it]){
-      console.log('perdiste')
-      it = 0;
-      user = [];
-      //Boton de reset ROJO regresar al home, falta agregar
-    }
-    if(user.length === validate4.length){
-      console.log('ganaste')
-      //Boton de reset VERDE regresar al home, falta agregar
-    }
-    it += 1;
-    // console.log(it)
+function check4(e){
+  let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
+  let val = key.dataset.key;
+  let btn_game = document.getElementById('melody4');
+      
+  // console.log(key.dataset.key)
+  user.push(val)
+  console.log(user)
+  console.log(btn_game)
+  if(user[it] !== validate4[it]){
+    console.log('perdiste')
+    it = 0;
+    user = [];
+    
+    //Boton de reset ROJO regresar al home, falta agregar
+    btn_game.classList.add('gameOver');
+    btn_game.innerHTML = "Game Over"
+    console.log(btn_game);
+    window.removeEventListener('keydown', check4);
+    setTimeout(stop, 3000);
+        
+  }else if(user.length === validate3.length){
+    console.log('ganaste');
+    //Boton de reset VERDE regresar al home, falta agregar
+    btn_game.innerHTML = "Ganaste!!!"
+    window.removeEventListener('keydown', check4);
+    setTimeout(stop, 3000);
+    
   }
+  it += 1;
+  // console.log(it)
+}
 
  // validacion quita melodia  
 
-  function check5(e){
-    let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
-    let val = key.dataset.key;
-    console.log(key.dataset.key)
-    user.push(val)
-    console.log(user)
-    if(user[it] !== validate5[it]){
-      console.log('perdiste')
-      it = 0;
-      user = [];
-      //Boton de reset ROJO regresar al home, falta agregar
-    }
-    if(user.length === validate5.length){
-      console.log('ganaste')
-      //Boton de reset VERDE regresar al home, falta agregar
-    }
-    it += 1;
-    // console.log(it)
+ function check5(e){
+  let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
+  let val = key.dataset.key;
+  let btn_game = document.getElementById('melody5');
+      
+  // console.log(key.dataset.key)
+  user.push(val)
+  console.log(user)
+  console.log(btn_game)
+  if(user[it] !== validate5[it]){
+    console.log('perdiste')
+    it = 0;
+    user = [];
+    
+    //Boton de reset ROJO regresar al home, falta agregar
+    btn_game.classList.add('gameOver');
+    btn_game.innerHTML = "Game Over"
+    console.log(btn_game);
+    window.removeEventListener('keydown', check5);
+    setTimeout(stop, 3000);
+        
+  }else if(user.length === validate3.length){
+    console.log('ganaste');
+    //Boton de reset VERDE regresar al home, falta agregar
+    btn_game.innerHTML = "Ganaste!!!"
+    window.removeEventListener('keydown', check5);
+    setTimeout(stop, 3000);
+    
   }
-
+  it += 1;
+  // console.log(it)
+}
 // validacion sexta melodia
 
-  function check6(e){
-    let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
-    let val = key.dataset.key;
-    console.log(key.dataset.key)
-    user.push(val)
-    console.log(user)
-    if(user[it] !== validate6[it]){
-      console.log('perdiste')
-      it = 0;
-      user = [];
-      //Boton de reset ROJO regresar al home, falta agregar
-    }
-    if(user.length === validate6.length){
-      console.log('ganaste')
-      //Boton de reset VERDE regresar al home, falta agregar
-    }
-    it += 1;
-    // console.log(it)
+function check6(e){
+  let key = document.querySelector(`.tecla[data-key="${e.keyCode}"]`);
+  let val = key.dataset.key;
+  let btn_game = document.getElementById('melody6');
+      
+  // console.log(key.dataset.key)
+  user.push(val)
+  console.log(user)
+  console.log(btn_game)
+  if(user[it] !== validate6[it]){
+    console.log('perdiste')
+    it = 0;
+    user = [];
+    
+    //Boton de reset ROJO regresar al home, falta agregar
+    btn_game.classList.add('gameOver');
+    btn_game.innerHTML = "Game Over"
+    console.log(btn_game);
+    window.removeEventListener('keydown', check6);
+    setTimeout(stop, 3000);
+        
+  }else if(user.length === validate6.length){
+    console.log('ganaste');
+    //Boton de reset VERDE regresar al home, falta agregar
+    btn_game.innerHTML = "Ganaste!!!"
+    window.removeEventListener('keydown', check6);
+    setTimeout(stop, 3000);
+    
   }
+  it += 1;
+  // console.log(it)
+}
 
 
 
@@ -490,29 +554,49 @@ function melody01(){
 function melody02(){
     play5teclas(...melodia2);
     window.addEventListener('keydown', check2);
-      
+    let btn_game = document.getElementById('melody2');
+    btn_game.classList.remove('gameOver')
+    btn_game.classList.add('botn2play')
+    btn_game.innerHTML = "Start"
 
 }
 
 function melody03(){
     play5teclas(...melodia3);
     window.addEventListener('keydown', check3);
+    let btn_game = document.getElementById('melody3');
+    btn_game.classList.remove('gameOver')
+    btn_game.classList.add('botn3play')
+    btn_game.innerHTML = "Start"
 
 }
 function melody04(){
     play5teclas(...melodia4);
     window.addEventListener('keydown', check4);
+    let btn_game = document.getElementById('melody4');
+    btn_game.classList.remove('gameOver')
+    btn_game.classList.add('botn4play')
+    btn_game.innerHTML = "Start"
+    
 
 
 }
 function melody05(){
     play5teclas(...melodia5);
     window.addEventListener('keydown', check5);
+    let btn_game = document.getElementById('melody5');
+    btn_game.classList.remove('gameOver')
+    btn_game.classList.add('botn5play')
+    btn_game.innerHTML = "Start"
 
 }
 function melody06(){
     play5teclas(...melodia6);
     window.addEventListener('keydown', check6);
+    let btn_game = document.getElementById('melody6');
+    btn_game.classList.remove('gameOver')
+    btn_game.classList.add('botn6play')
+    btn_game.innerHTML = "Start"
 
 }
 
